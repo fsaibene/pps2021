@@ -1,0 +1,15 @@
+<div *ngIf="(needValidate$ | async)">
+    <span class="error ion-padding" *ngIf="control && control.errors?.required">
+        Requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="control && control.errors?.minlength">
+        Debe tener un minimo de {{control.errors.minlength.requiredLength}} caracteres
+    </span>
+    <span class="error ion-padding" *ngIf="control && control.errors?.maxlength">
+        Debe tener un maximo de x
+    </span>
+
+    <span class="error ion-padding" *ngIf="control && control.errors?.email">
+        Email inválido.
+   </span> 
+</div>
